@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CommandSearch Component
 
-## Getting Started
+Este proyecto es una exportación reproducible de un componente llamado `CommandSearch` extraído de un blog. Aquí se incluye el mínimo necesario para que funcione correctamente. Este proyecto utiliza las siguientes tecnologías:
 
-First, run the development server:
+- **TanStack**: Para la gestión avanzada de datos en tablas y listas.
+- **Sanity**: Como CMS para manejar el contenido.
+- **Next.js**: Framework para aplicaciones web en React.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Requisitos previos
+
+Antes de correr y probar este proyecto, debes configurar variables de entorno con los siguientes nombres:
+
+```env
+NEXT_PUBLIC_SANITY_PROJECT_ID=<tu_project_id>
+NEXT_PUBLIC_SANITY_DATASET=<tu_dataset>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configuración de Sanity
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Si tienes una cuenta en [Sanity](https://www.sanity.io/), utiliza tu propia cuenta.
+2. Crea un proyecto vacío en Sanity.
+3. Copia el `project_id` y el `dataset` de tu proyecto y agrégalos a las variables de entorno mencionadas anteriormente.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Uso del componente
 
-## Learn More
+1. **Inicia el proyecto**: Corre el proyecto en tu entorno local.
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Accede al Studio**: Navega a la ruta `/studio` para ingresar al entorno de Sanity.
+3. **Crea un post de prueba**: Desde el Studio, agrega un post para pruebas.
+4. **Prueba el componente CommandSearch**: Navega a la ruta principal (`/`) donde se encuentra el componente `CommandSearch`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+El componente te permitirá buscar los datos de los posts creados desde el Studio.
 
-## Deploy on Vercel
+## Estructura del proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`components/Search`**: Contiene la implementación principal del componente de búsqueda.
+- **`pages/studio`**: Acceso al entorno de Sanity.
+- **`pages/index.js`**: Punto de entrada donde se incluye el componente `CommandSearch`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tecnologías utilizadas
+
+- **TanStack**: [Documentación](https://tanstack.com/query/latest/docs/framework/react/overview)
+- **Sanity**: [Documentación](https://www.sanity.io/docs)
+- **Next.js**: [Documentación](https://nextjs.org/docs)
+
